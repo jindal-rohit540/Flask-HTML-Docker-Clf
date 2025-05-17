@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
+import pandas as pd  # ✅ Added for DataFrame input to model
 
 # Load the trained model
 with open('random_forest_model_new.pkl', 'rb') as f:
@@ -20,7 +21,14 @@ def predict():
     Credit_History = int(data['Credit_History'])
     Total_Income_Log = float(data['Total_Income_Log'])
 
-    input_features = np.array([[Gender, Married, Credit_History, Total_Income_Log]])
+    # ✅ Use DataFrame with feature names instead of raw NumPy array
+    input_features = pd.DataFrame([{
+        'Gender': Gender,
+        'Married': Married,
+        'Credit_History': Credit_History,
+        'Total_Income_Log': Total_Income_Log
+    }])
+
     prediction = model.predict(input_features)[0]
     result = "Loan Approved" if prediction == 1 else "Loan Rejected"
 
