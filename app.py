@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return "Hello from Flask"
+    return "Hello from Flask, this is version two."
 
 @app.route('/predict', methods=['POST'])
 def predict():
