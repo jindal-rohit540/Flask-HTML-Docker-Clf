@@ -13,7 +13,7 @@ def test_home(client):
     assert b"Hello from Flask" in response.data
 
 
-@pytest.mark.skip(reason="Skipping test_predict due to model changes")
+
 def test_predict(client):
     test_data = {
         'Gender': 1,              # Male → 1
