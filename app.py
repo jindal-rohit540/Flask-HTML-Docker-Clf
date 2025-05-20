@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return "Hello from Flask. This is version 2."
+    return "Hello from Flask. This is version 3 of my ml model."
 
 @app.route('/predict', methods=['POST'])
 def predict():

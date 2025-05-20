@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-west-2:396608808293:task-definition/flask_loan_app_task:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-west-2:503561433560:task-definition/test-22-task-new:1",
     "containerDefinitions": [
         {
             "name": "flask_container",
-            "image": "396608808293.dkr.ecr.us-west-2.amazonaws.com/flask_app",
+            "image": "503561433560.dkr.ecr.us-west-2.amazonaws.com/flask_app",
             "cpu": 0,
             "portMappings": [
                 {
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/flask_loan_app_task",
+                    "awslogs-group": "/ecs/test-22-task-new",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
@@ -35,8 +35,8 @@
             "systemControls": []
         }
     ],
-    "family": "flask_loan_app_task",
-    "executionRoleArn": "arn:aws:iam::396608808293:role/ecsTaskExecutionRole",
+    "family": "test-22-task-new",
+    "executionRoleArn": "arn:aws:iam::503561433560:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
     "volumes": [],
@@ -84,8 +84,8 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-05-17T19:33:09.030Z",
-    "registeredBy": "arn:aws:iam::396608808293:user/devops_user_2170315_36591",
+    "registeredAt": "2025-05-20T12:10:34.924Z",
+    "registeredBy": "arn:aws:iam::503561433560:user/devops_user_2170315_37405",
     "enableFaultInjection": false,
     "tags": []
 }
