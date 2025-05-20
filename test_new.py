@@ -23,5 +23,5 @@ def test_predict(client):
     }
 
     resp = client.post('/predict', json=test_data)
-    assert resp.status_code == 404
+    assert resp.status_code == 200
     assert resp.json == {'prediction': 'Loan Rejected'}
